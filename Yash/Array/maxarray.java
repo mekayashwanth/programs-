@@ -1,15 +1,30 @@
+import java.util.Scanner;
 class maxarray{
-static int a[]={23,34,12,65,34};
-static int largest()
+	public static void main(String[]args){
+		int n ,max;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of  elements : ");
+		n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("enter elements of array");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+max=a[0];
+for(int i=0;i<n;i++)
 {
-int i;
-int max=a[0];
-for(i=1;i<a.length;i++)
-if(a[i]>max)
-max=a[i];
-return max;
+	if(max < a[i])
+	{
+		max=a[i];
+	}
 }
-public static void main(String[]args){
-System.out.println("max number in array is : "+ largest());
+System.out.println("maximum number is  " + max);
 }
 }
+
+
+		
+			
+			
+	
