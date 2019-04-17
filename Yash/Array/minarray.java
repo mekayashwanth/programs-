@@ -1,15 +1,24 @@
+import java.util.Scanner;
 class minarray{
-static int b[]={34,3,1,42,27};
-static int smallest()
+	public static void main(String[]args){
+		int n ,min;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of  elements : ");
+		n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("enter elements of array");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+min=a[0];
+for(int i=0;i<n;i++)
 {
-int i;
-int min=b[0];
-for(i=1;i<b.length;i++)
-if(b[i]<min)
-min=b[i];
-return min;
+	if(min > a[i])
+	{
+		min=a[i];
+	}
 }
-public static void main(String[] args){
-System.out.println("minimum number in array is : "+ smallest());
+System.out.println("minimum number is  " + min);
 }
 }
